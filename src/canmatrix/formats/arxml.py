@@ -2300,7 +2300,7 @@ def decode_ethernet_helper(ea, float_factory, generated_update_bits_init_to_1: b
                         ttl=get_int(ttl)
                     )
 
-                    pdus = ea.get_child(socket_connection_bundle, "PDUS")
+                    pdus = ea.get_child(socket_connection, "PDUS")
                     for scii in ea.findall("SOCKET-CONNECTION-IPDU-IDENTIFIER", pdus):
 
                         header_id = ea.get_child(scii, "HEADER-ID")
